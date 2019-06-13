@@ -8,13 +8,7 @@
 
 <body>
     <p><a href="https://www.w3schools.com/jsref/jsref_dowhile.asp" target="_blank">do while</a></p>
-    <pre>
-        do {
-          // code block to be executed
-        }
-        while (condition);
-    </pre>
-
+   
     <!-- 點選後開始輸入飲料金額，最後將總金額以及計算過程顯示在畫面上 -->
     <button onclick="sum()">開始統計飲料金額</button>
     <p id="demo"></p>
@@ -22,8 +16,42 @@
     <script>
         
         // 透過 prompt 讓使用者輸入金額
+        // function sum(){
+        //     var impot=parseInt(prompt("請輸入飲料價錢","")) ;
+        //     alert("總金額為"+impot);
+        // }
         
         // 若輸入0表示不再輸入，進行畫面顯示結算金額
+        //  function sum(){
+        //     var tot=0;
+        //      do{
+        //         var impot=parseInt(prompt("請輸入飲料價錢","")) ;
+        //         var tot=tot+impot;
+        //      }while(impot!=0)
+        //      alert("總金額為"+tot);
+        // }
+
+        
+
+
+        function sum(){
+            var tot=0;
+            var showlist="";
+            var iforder="";
+            
+             do{
+                iforder=prompt("是否點餐","Y 或 N") ;
+                console.log(typeof(iforder));
+
+             }while(iforder!="N")
+             var orderuser=prompt("請輸入訂購人","") ;
+                var impotname=prompt("請輸入品項","") ;
+                var impotprice=parseInt(prompt("請輸入價錢","")) ;
+                 tot=tot+impotprice;
+                 showlist=showlist+orderuser+impotname+impotprice+"\n";
+                 alert(showlist);
+             alert("總金額為"+tot);
+        }
 
     </script>
 

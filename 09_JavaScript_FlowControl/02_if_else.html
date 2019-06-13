@@ -21,12 +21,40 @@
    </pre>
 
     <script>
+        
         // 1. 取得系統現在時間(HH)
+        var d = new Date();
+        console.log(d);
+
+        var hh=d.setHours();
+        var mm=d.setMinutes();
         // 2. 如果是 8:00-11:59，顯示上午課程
         // 3. 如果是 12:00-12:59，顯示中午用餐時間
         // 4. 如果是 13:00-16:00，顯示下午課程
         // 5. 其他的時段，顯示非課程時間
+        console.log(hh);
+        if(hh >=8 && hh <=11){
+           console.log("上午課程");
+        }else if(hh ==12 ){
+           console.log("中午用餐時間");
+        }else if(hh >=13 && hh <=16){
+           console.log("下午課程");
+        }else{
+          console.log("非課程時間");
+        }
+        
+        
         // 6. 使用三元運算子，判斷12點以前為AM，否則為PM
+        var result;
+        if(hh<=12){
+          result="AM";
+        }else{
+          result="PM";
+        }
+        console.log(result);
+
+        var result2=hh<=12?"AM":"PM";
+
         
     </script>
 </body></html>

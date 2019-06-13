@@ -7,14 +7,26 @@
 
 <body>
     <p><a href="https://www.w3schools.com/Js/js_loop_while.asp" target="_blank">while</a></p>
-    <pre>
-        while (condition) {
-          // code block to be executed
-        }
-    </pre>
+  
     <script>
         // 網頁必須輸入通關密碼1234才會停止
-
+        // var flag=true;
+        // while(flag){
+        //  var pass=prompt("輸入通關密碼","");
+        // if (pass=="1234"){
+        //     flag=flase;
+        // }  
+        // }
         // 判斷目前的數值是從1加到?
+        var tot=6;
+        var cnt=1;
+        var str="";
+        while(tot>0){
+            tot=tot-cnt;
+            str=str+cnt+"+";
+            cnt=cnt+1;
+        }
+        console.log(str.substr(0.,str.length-1)+"=6");
+
     </script>
 </body></html>

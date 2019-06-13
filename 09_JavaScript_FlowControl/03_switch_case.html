@@ -20,15 +20,39 @@
             // code block
         }
    </pre>
+   請輸入頻道代碼
+   <p><input type="text" id="tvshow" value=""></p>
+   <button onclick="query()">查詢</button>
+   <p id="result">查詢結果</p>
 
     <!-- 請設計一個介面，讓使用者輸入頻道代碼後，網頁可以顯示對應的頻道名稱 -->
 
     <script>
-        // 透過switch case設定底下對應項目
+      // 透過switch case設定底下對應項目
         // 20 ==> TLC 旅遊生活頻道
         // 65 ==> HBO
         // 66 ==> 東森洋片台
         // 非上述 ==> 頻道尚未建立
+      function query(){
+        var elm=document.getElementById("tvshow").value;
+        var trsulename;
+      switch (elm) {
+        case "20":
+        trsulename="TLC 旅遊生活頻道";
+        break;
+        case "65":
+        trsulename="HBO";
+        break;
+        case "66":
+        trsulename="東森洋片台";
+        break;
+        default:
+        trsulename="頻道尚未建立";
+        break;
+      }
+      document.getElementById("result").textContent=trsulename;
+      }
+        
 
     </script>
 </body>

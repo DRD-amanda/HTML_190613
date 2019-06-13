@@ -8,23 +8,38 @@
 
 <body>
     <p><a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">for</a></p>
-    <pre>
-        for (statement 1; statement 2; statement 3) {
-            // code block to be executed
-        }
-    </pre>
+  <p id="sample7"></p>
+  <p>----------------------------------</p>
+  <p id="sample8"></p>
 
     <!-- 設置三標籤 <pre> id 為 pTimes，另外兩個為<p> id分別為pSquare、pTriangle -->
 
     <script type="text/javascript">
+
+    // for(var i=0;i<10;i++){
+    //    console.log(i);
+    // }
         // 1. 使用for迴圈，列印出這個月份從1號到目前系統日
-
+        var d=new Date();
+        var today=d.getDate();
+        for (var i=1;i<today+1;i++) {
+            console.log("日期==>"+(d.getMonth()+1)+"/"+i);
+            
+        }
         // 2. 使用for迴圈，逐一取得陣列裡面的元素
-
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        for (var i=0;i<weekList.length;i++){
+            console.log(weekList[i]);
+        }
         // 3. 使用 for in，逐一尋覽物件裡面的屬性
+        
 
         // 4. 試試看，從1加到10，配合for迴圈，應該要怎麼撰寫
-
+        var tot=0;
+        for(var i=1;i<=10;i++){
+            tot=tot+i;
+        }
+        console.log(tot);
         // 6. 試試看，列印九九乘法表 (tab為 "&#9;")
 
         // 7. 雙層迴圈 - 長方型星星
@@ -34,12 +49,32 @@
         // **** 
         // **** 
         // ****
-
+        var stars7="";
+        for(var j=1;j<=6;j++){
+           for (var i=1;i<=4;i++){
+           stars7=stars7+"*";
+           //stars+="*";
+        } 
+        stars7=stars7+"<br>";
+        }
+        document.getElementById("sample7").innerHTML=stars7;
+        
         // 8. 雙層迴圈 - 三角形
         // * 
         // ** 
         // *** 
         // **** 
+        var stars8="";
+        for(var j=1;j<=4;j++){
+            
+    for (var i=1;i<=j;i++){
+           stars8=stars8+"*";
+        } 
+        stars8=stars8+"<br>";
+        }
+        
+        document.getElementById("sample8").innerHTML=stars8;
+       
     </script>
 </body>
 
