@@ -7,6 +7,29 @@
 </head>
 
 <body>
+    <div onclick="divclick()" style="background-color:blue">
+    <p onclick="pclick()" style="background-color: red;width: 300px"> 
+    <button onclick="btnclick(event)">按鈕在此</button>
+    </p>
+    </div>
+
+
+    
+
+    <script>
+    function btnclick(ptn) {
+        console.log(ptn);
+        console.log("buttonclick");
+        ptn.stopPropagation();
+    }
+    function pclick() {
+        console.log("pclick");
+    }
+    function divclick() {
+        console.log("divclick");
+    }
+    
+    </script>
 
     <!-- 1. 撰寫一個 <button>，點選後再 console.log 寫下一些訊息 -->
     <!-- 2. 撰寫一個 <p>，點選後再 console.log 寫下一些訊息，且包住步驟一的 <button> -->
